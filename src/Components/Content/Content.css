@@ -1,0 +1,74 @@
+@font-face {
+  font-family: Oswald;
+  src: url("../../../public/assets/fonts/Oswald-Medium.ttf");
+}
+@font-face {
+  font-family: Raleway;
+  src: url("../../../public/assets/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../../../public/assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+.content {
+  padding: 112px 0px;
+  background-color: #ffffff;
+}
+.content h4 {
+  font-family: Montserrat;
+  color: #737373;
+  font-size: 20px;
+}
+.content h2 {
+  font-family: Oswald;
+  font-size: 49px;
+  color: #252b42;
+}
+.content p {
+  font-style: 18px;
+  font-family: Raleway;
+  color: #737373;
+}
+
+.content .row {
+  margin-left: 80px !important;
+}
+.content .first {
+  background-color: #23856d;
+  color: white;
+  border: none;
+}
+.content .second {
+  border: solid #23856d 1px;
+  background-color: transparent;
+  color: #23856d;
+}
+@media screen and (max-width: 768px) {
+  .content h2 {
+    margin: 15px 0px;
+  }
+  .content p {
+    margin: 15px 0px;
+  }
+  .content .first {
+    margin: 15px 0px 0px 0px;
+  }
+  .content .second {
+    margin: 0px 0px 15px 0px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .contentButtons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: 10px;
+  }
+  .content .row {
+    margin-left: 0px !important;
+  }
+}
+.contentButtons {
+  display: flex;
+  gap: 10px;
+}

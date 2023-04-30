@@ -1,0 +1,171 @@
+@font-face {
+  font-family: Oswald;
+  src: url("../../../public/assets/fonts/Oswald-Medium.ttf");
+}
+@font-face {
+  font-family: Raleway;
+  src: url("../../../public/assets/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../../../public/assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+.navbar {
+  background-color: transparent;
+}
+.altNav {
+  text-align: center;
+  background-color: #252b42;
+}
+.altNav li {
+  padding: 15px 0px;
+}
+.altNav a {
+  text-decoration: none;
+}
+
+.altNav ul {
+  font-family: Raleway;
+  margin: 50px 0px;
+  text-decoration: none;
+}
+.altNav svg {
+  color: white;
+}
+.altNavUl {
+  margin-right: 15px;
+  display: flex;
+  gap: 15px;
+  color: white;
+}
+.altNavUl ul {
+  margin: 0px auto;
+}
+.altNavUl button {
+  padding: 0px;
+  border: none;
+}
+.navbar a {
+  font-size: 17px;
+  font-family: Raleway;
+  color: white;
+}
+.navbar p {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10.5rem;
+  font-family: Oswald;
+  color: white;
+  font-size: 26px;
+}
+.header {
+  position: relative;
+  color: white;
+  font-family: Oswald;
+  background-image: url("../../../public/assets/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 790px;
+  overflow: hidden;
+}
+.icons {
+  margin-right: 66px;
+}
+.Title {
+  position: absolute;
+  left: 22.5rem;
+  top: 15rem;
+}
+
+.Title h1 {
+  font-size: 70px;
+}
+
+.Title p {
+  font-family: Raleway;
+  font-size: 18px;
+}
+.bt {
+  font-family: Raleway;
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-weight: lighter;
+  border-radius: 5px;
+  font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+  .Title p {
+    font-size: 18px;
+    font-weight: 100;
+  }
+  .Title h1 {
+    font-size: 49px;
+  }
+  .bt {
+    padding: 15px 40px;
+  }
+  .Title {
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .header {
+    background-image: url("../../../public/assets/images/background2.png");
+    background-position: center;
+    height: 790px;
+    background-size: cover;
+  }
+  .headerButtons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .Title {
+    left: 10.5rem;
+  }
+  .navbar p {
+    margin-left: 2.5rem;
+  }
+}
+svg {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: bold;
+}
+.Login {
+  font-family: Raleway;
+  font-weight: 700;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.count {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 6px;
+}
+.list li {
+  padding-left: 25px;
+}
+.first {
+  background-color: #23a6f0;
+  color: white;
+  border: none;
+}
+.second {
+  border: solid white 1px;
+  background-color: transparent;
+  color: white;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 10px;
+}
