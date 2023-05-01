@@ -4,11 +4,9 @@ function FeaturesElement(props) {
       <div className="num">
         <p>{props.num}</p>
       </div>
-      <p className="title">The typical journey into product management</p>
+      <p className="title">{props.title}</p>
       <div className="line"></div>
-      <p className="disc">
-        We are always fully focused on helping your child and you..
-      </p>
+      <p className="disc">{props.disc}</p>
     </div>
   );
 }

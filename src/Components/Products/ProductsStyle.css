@@ -1,0 +1,78 @@
+.products {
+  padding: 112px 0px;
+}
+.productsFlex {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product {
+  font-family: Montserrat;
+  padding: 48px 24px;
+  width: 245px;
+  height: 376px;
+  background-color: #f5f8fd;
+}
+.productSectionTitle {
+  margin-left: 8rem;
+  margin-bottom: 36px;
+}
+.products a {
+  font-family: Raleway;
+  text-decoration: none;
+  font-size: 17px;
+}
+.productName {
+  color: #252b42;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+}
+.productCat {
+  color: #737373;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+}
+.products img {
+  background-color: #f5f8ff;
+  margin-bottom: 12px;
+}
+.products h4 {
+  color: #737373;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.20000000298023224px;
+}
+.products h3 {
+  font-family: Oswald;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.10000000149011612px;
+}
+.productPrice {
+  width: 47px;
+  height: 24px;
+
+  font-family: RalewayBold;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.1px;
+
+  color: #2dc071;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+@media screen and (max-width: 768px) {
+  .productSectionTitle {
+    margin-left: 4rem;
+  }
+}

@@ -1,4 +1,5 @@
 import "./HeaderStyle.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 import {
   BsChevronCompactDown,
   BsPerson,
@@ -6,13 +7,40 @@ import {
   BsCart,
   BsHeart,
   BsCart3,
-  BsList,
+  BsFilterRight,
 } from "react-icons/bs";
 const Header = () => {
+  const altNavList = ["Home", "Product", "Pricing", "Content"];
+  const basicNavList = [
+    {
+      text: "Home",
+      item: <></>,
+    },
+    {
+      text: "Shop",
+      item: <BsChevronCompactDown />,
+    },
+    {
+      text: "About",
+      item: <></>,
+    },
+    {
+      text: "Blog",
+      item: <></>,
+    },
+    {
+      text: "Content",
+      item: <></>,
+    },
+    {
+      text: "Pages",
+      item: <></>,
+    },
+  ];
   return (
     <>
-      <nav class="navbar navbar-expand-lg altNav d-lg-none">
-        <p class="navbar-brand ms-3" href="#">
+      <nav className="navbar navbar-expand-lg altNav d-lg-none">
+        <p className="navbar-brand ms-3" href="#">
           MEDSONO
         </p>
 
@@ -20,7 +48,7 @@ const Header = () => {
           <BsSearch />
           <BsCart3 />
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -28,38 +56,31 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <BsList />
+            <BsFilterRight />
           </button>
         </div>
         <div
-          class="collapse navbar-collapse altNavList"
+          className="collapse navbar-collapse altNavList"
           id="navbarSupportedContent"
         >
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a href="">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="">Product</a>
-            </li>
-            <li class="nav-item">
-              <a href="">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a href="">Contact</a>
-            </li>
+          <ul className="navbar-nav mx-auto">
+            {altNavList.map((e, i) => (
+              <li className="nav-item" key={i}>
+                <a href="">{e}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
       <header className="header">
-        <nav class="navbar navbar-expand-lg py-3 d-none d-lg-block">
-          <div class="container">
+        <nav className="navbar navbar-expand-lg py-3 d-none d-lg-block">
+          <div className="container">
             <img src="assets/images/Logo.png" alt="" />
-            <p class="navbar-brand " href="#">
+            <p className="navbar-brand " href="#">
               MEDSONO
             </p>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -67,71 +88,31 @@ const Header = () => {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">
-                    Home
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link "
-                    href="#"
-                    id="navbarDropdownMenuLink"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Shop
-                  </a>
-                </li>
-                <BsChevronCompactDown />
-                <li class="nav-item">
-                  <a class="nav-link" href="#work">
-                    About
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#project">
-                    Blog
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Contact
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contact">
-                    Pages
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <img
-                    src="assets/images/Vector.png"
-                    class="d-none d-md-block"
-                    alt=""
-                  />
-                  <form class="d-flex d-md-none" role="search">
-                    <input
-                      class="form-control d-inline"
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                    />
-                  </form>
-                </li>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav mx-auto">
+                {basicNavList.map((e, i) => (
+                  <li className="nav-item" key={i}>
+                    <div className="special">
+                      <a className="nav-link" aria-current="page" href="#">
+                        {e.text}
+                      </a>
+                      {e.item}
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
             <div
-              class="collapse navbar-collapse icons"
+              className="collapse navbar-collapse icons"
               id="navbarSupportedContent"
             >
-              <ul class="navbar-nav mx-auto list">
-                <li class="nav-item">
+              <ul className="navbar-nav mx-auto list">
+                <li className="nav-item">
                   <div>
                     <BsPerson />
                     <span className="Login" href="">
@@ -139,12 +120,12 @@ const Header = () => {
                     </span>
                   </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <div>
                     <BsSearch />
                   </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <div>
                     <BsCart />
                     <span className="count" href="">
@@ -152,7 +133,7 @@ const Header = () => {
                     </span>
                   </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <div>
                     <BsHeart />
                     <span className="count" href="">

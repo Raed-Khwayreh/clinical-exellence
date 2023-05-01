@@ -26,10 +26,8 @@ const Content = () => {
               </p>
             </p>
             <div className="contentButtons">
-              <button className="first bt">Shop now</button>
-              <button type="button " className="second bt">
-                View More
-              </button>
+              <button className="contentFirstBtn bt">Shop now</button>
+              <button className="contentSecondBtn bt">View More</button>
             </div>
           </div>
           <div className=" col-lg-6 text-center">

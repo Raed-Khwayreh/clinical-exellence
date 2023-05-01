@@ -1,15 +1,3 @@
-@font-face {
-  font-family: Oswald;
-  src: url("../../../public/assets/fonts/Oswald-Medium.ttf");
-}
-@font-face {
-  font-family: Raleway;
-  src: url("../../../public/assets/fonts/Raleway-Regular.ttf");
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../../../public/assets/fonts/Montserrat-VariableFont_wght.ttf");
-}
 .navbar {
   background-color: transparent;
 }
@@ -26,7 +14,7 @@
 
 .altNav ul {
   font-family: Raleway;
-  margin: 50px 0px;
+  margin: 49px 0px;
   text-decoration: none;
 }
 .altNav svg {
@@ -53,7 +41,7 @@
 .navbar p {
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 10.5rem;
+  margin-left: 7.5rem;
   font-family: Oswald;
   color: white;
   font-size: 26px;
@@ -74,7 +62,7 @@
 }
 .Title {
   position: absolute;
-  left: 22.5rem;
+  left: 20.5rem;
   top: 15rem;
 }
 
@@ -125,13 +113,18 @@
     grid-area: 10px;
   }
 }
-
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
   .Title {
-    left: 10.5rem;
+    left: 11.5rem;
   }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
   .navbar p {
-    margin-left: 2.5rem;
+    margin-left: 3.5rem;
+  }
+  .Title {
+    left: 11.5rem;
   }
 }
 svg {
@@ -159,13 +152,23 @@ svg {
   color: white;
   border: none;
 }
+.first:hover {
+  background-color: #0e8bd3;
+}
 .second {
-  border: solid white 1px;
+  border: solid white 1px;  
   background-color: transparent;
   color: white;
+}
+.second:hover {
+  background-color: #ffffff;
+  color: #1b7eb8;
 }
 
 .headerButtons {
   display: flex;
   gap: 10px;
+}
+.nav-link {
+  display: inline !important;
 }
