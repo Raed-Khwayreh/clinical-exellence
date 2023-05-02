@@ -1,0 +1,190 @@
+.sub {
+  padding: 112px 0px;
+  background-color: #eef9ff;
+}
+
+.sub h6 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  text-align: center;
+  letter-spacing: 0.2px;
+
+  /* second-text-color */
+
+  color: #737373;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.ratingBar {
+  margin-bottom: 21.8px;
+}
+.profileImage {
+  background-image: url("../../../public/assets/images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 55px;
+  height: 55px;
+  border-radius: 100px;
+}
+.profile {
+  margin-top: 20px;
+}
+.subFlex {
+  gap: 225px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rating {
+  align-self: center;
+  width: 333px;
+  text-align: center;
+}
+.subLine {
+  height: 298px;
+  width: 2px;
+  background-color: #ececec;
+}
+@media screen and (max-width: 768px) {
+  .subLine {
+    height: 2px;
+    width: 298px;
+  }
+  .subFlex {
+    gap: 37px;
+  }
+}
+.sub a {
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+
+  color: #23a6f0;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.sub h6 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+
+  color: #252b42;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+.join {
+  align-self: center;
+  text-align: center;
+}
+.joinp1 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.2px;
+
+  color: #8ec2f2;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-bottom: 25px;
+}
+.join h3 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.1px;
+
+  color: #252b42;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-bottom: 25px;
+}
+input {
+  width: 290px;
+  padding: 15px 15px;
+  background: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+}
+.subInput {
+  border: none;
+  background-color: #23a6f0;
+  color: white;
+  padding: 15px 22.5px;
+}
+.joinp2 {
+  margin-top: 25px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  /* identical to box height, or 144% */
+
+  text-align: center;
+  letter-spacing: 0.2px;
+
+  /* second-text-color */
+
+  color: #737373;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+.sub .carousel .slide {
+  height: 250px;
+}
+.sub .carousel .control-next.control-arrow:before {
+  border-left: 8px solid #000;
+}
+.sub .carousel.carousel-slider .control-arrow:hover {
+  background: rgba(0, 0, 0, 0);
+}
+.sub .carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #000;
+}
+.profileName h6 {
+  text-align: start;
+}
+.profileName a p {
+  margin: 0px   ;
+  text-align: start;
+}

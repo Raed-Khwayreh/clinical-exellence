@@ -1,32 +1,33 @@
 import "./AdvantagesStyle.css";
-import { BsCreditCard } from "react-icons/bs";
+import Title from "../common/Title";
+import AdvElement from "./AdvElement";
 const Advantages = () => {
+  const array = [1, 2, 3, 4];
   return (
     <section className="advantages">
       <div className="container">
         <div className="ms-md-5">
-          <div className="advantagesText">
-            <h6>Practice Advice</h6>
-            <h3>Our Main Advantages</h3>
-            <p></p>
-          </div>
+          <Title
+            margin="70px"
+            text="Practice Advice"
+            title="Our Main Advantages"
+            parag="
+              Problems trying to resolve the conflict between the two major
+              realms of Classical physics: Newtonian mechanics"
+          />
           <div className="row justify-content-center">
             <div className="col-md-5">
               <img
-                className="img-fluid"
+                className="img-fluid "
                 src={process.env.PUBLIC_URL + "assets/images/adv.png"}
                 alt=""
               />
             </div>
             <div className="col-md-6">
-              <div className="row">
-                <div className="col-md-3">
-                  <div className="advCard">
-                    <div className="cardDiv">
-                      <BsCreditCard color="white" size="36" />
-                    </div>
-                  </div>
-                </div>
+              <div className="advFlex">
+                {array.map(() => (
+                  <AdvElement />
+                ))}
               </div>
             </div>
           </div>

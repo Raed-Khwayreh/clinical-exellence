@@ -18,3 +18,7 @@
   font-family: OswaldBold;
   src: url("../public/assets/fonts/Oswald-Bold.ttf");
 }
+@font-face {
+  font-family: MontserratBold;
+  src: url("../public/assets/fonts/Montserrat-Bold.ttf");
+}

@@ -1,5 +1,7 @@
 import "./ProductsStyle.css";
 import ProductsCard from "./ProductsCard";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Products = () => {
   const products = [
     {
@@ -54,7 +56,7 @@ const Products = () => {
   ];
   return (
     <section className="products">
-      <div className="container ">
+      <div className="container d-md-block d-none ">
         <div className="productSectionTitle">
           <h4>Featured Products</h4>
           <h3>BESTSELLER PRODUCTS</h3>
@@ -66,6 +68,13 @@ const Products = () => {
             ))}
           </div>
         }
+      </div>
+      <div className="container mt-5 px-4">
+        <Carousel className="main-slide d-md-none d-block" width="100%">
+          {products.map((e, i) => (
+            <ProductsCard key={i} name={e.name} cat={e.cat} img={e.img} />
+          ))}
+        </Carousel>
       </div>
     </section>
   );

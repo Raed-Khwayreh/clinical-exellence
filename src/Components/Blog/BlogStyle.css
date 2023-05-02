@@ -1,0 +1,182 @@
+.blog {
+  padding: 112px 0px;
+}
+.blogCard {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 238px;
+  height: 614px;
+
+  /* light-background-color */
+
+  background: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.blogFlex {
+  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px;
+  gap: 15px;
+
+  width: 100%;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-top: 20px;
+}
+.tag small {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+.tag small:hover {
+  cursor: default;
+  color: #8ec2f2;
+}
+.blogText h5 {
+  font-family: MontserratBold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  letter-spacing: 0.1px;
+
+  /* text-color */
+
+  color: #252b42;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.blogText p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  letter-spacing: 0.2px;
+
+  /* second-text-color */
+
+  color: #737373;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+.blogText {
+  margin: 10px 25px;
+}
+.img {
+  position: relative;
+}
+.new {
+  position: absolute;
+  width: 58px;
+  height: 24px;
+  left: 20px;
+  top: 20px;
+
+  /* danger-color */
+
+  background: #e74040;
+  /* light-drop-shadow */
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  background-color: #e74040;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  text-align: center;
+  letter-spacing: 0.2px;
+
+  /* light-text-color */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.icons {
+  display: flex;
+  margin: 0px 25px;
+  flex-direction: row;
+  gap: 25px;
+}
+.icons svg {
+  margin-right: 5px;
+}
+.blogCard a {
+  margin: 25px 25px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  gap: 10px;
+
+  width: 104px;
+  height: 24px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 4;
+  flex-grow: 0;
+}
+.blogCard a h6 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+
+  color: #737373;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
