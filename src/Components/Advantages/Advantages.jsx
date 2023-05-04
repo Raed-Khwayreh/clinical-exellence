@@ -25,8 +25,8 @@ const Advantages = () => {
             </div>
             <div className="col-md-6">
               <div className="advFlex">
-                {array.map(() => (
-                  <AdvElement />
+                {array.map((i) => (
+                  <AdvElement key={i} />
                 ))}
               </div>
             </div>

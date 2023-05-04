@@ -1,0 +1,112 @@
+.cartToDrop {
+  position: relative;
+  z-index: 3000;
+}
+.dropCart {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  right: -0.3rem;
+  width: 300px;
+  margin-top: 20px;
+  color: black;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #a4a4a4;
+}
+.cartToDrop:hover {
+  cursor: pointer;
+}
+.dropCart::before {
+  transform: rotate(45deg);
+
+  border-top: 1px solid #a4a4a4;
+  border-left: 1px solid #a4a4a4;
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  width: 15px;
+  height: 15px;
+  right: 1.1rem;
+  background-color: #ffffff;
+}
+.dropCart ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.dropCart li {
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+
+.dropCartDiv {
+  margin: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.cardList {
+  margin: 12px 28px;
+}
+.dropCartDivSpan {
+  margin: 0px;
+  text-align: center;
+  width: 17px;
+  height: 17px;
+  background-color: #4595fb;
+  border-radius: 100%;
+  color: #ffffff;
+  font-size: 11px;
+  font-family: Montserrat;
+}
+.price p {
+  font-size: 12px;
+  margin: 0px;
+  color: #707070;
+}
+.price p span {
+  font-size: 12px;
+  color: #4595fb;
+}
+.cardAndCount {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+.dropCart button {
+  margin: 0px 28px 18px 28px;
+  padding: 10px 0px;
+  background-color: #4595fb;
+  border: none;
+  color: white;
+}
+.cardList img {
+  width: 40px;
+}
+.cardList .cardProductName {
+  color: #545454;
+  font-size: 14px;
+  margin: 0px;
+}
+.cardListItem {
+  align-self: center;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+}
+.priceAndQauntity {
+  display: flex;
+  gap: 30px;
+}
+
+.cardList .cardQuantity {
+  color: #929292;
+  font-size: 12px;
+  margin: 0px;
+}
+.cardList .cardPrice {
+  color: #4595fb;
+  font-size: 12px;
+  margin: 0px;
+}

@@ -1,3 +1,5 @@
+import { AiOutlineHeart } from "react-icons/ai";
+import { RiShoppingCartLine } from "react-icons/ri";
 function ProductsCard(props) {
   return (
     <div className="product">
@@ -5,7 +7,11 @@ function ProductsCard(props) {
       <br />
       <a className="productCat">{props.cat}</a>
       <img src={process.env.PUBLIC_URL + props.img} alt="" />
-      <p className="productPrice">$6.48</p>
+      <p className="productPrice">{"$" + props.price }</p>
+      <div className="addAndLove">
+        <AiOutlineHeart color="red" />
+        <RiShoppingCartLine />
+      </div>
     </div>
   );
 }

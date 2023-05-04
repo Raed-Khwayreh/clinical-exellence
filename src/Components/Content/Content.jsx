@@ -16,14 +16,8 @@ const Content = () => {
               realms of Classical physics: Newtonian mechanics.
             </p>
             <p className="p2 d-none d-lg-block">
-              Problems trying to resolve the conflict
-              <p>
-                between
-                <p>
-                  the two major realms of Classical physics:
-                  <p>Newtonian mechanics.</p>
-                </p>
-              </p>
+              Problems trying to resolve the conflict between the two major
+              realms of Classical physics: Newtonian mechanics.
             </p>
             <div className="contentButtons">
               <button className="contentFirstBtn bt">Shop now</button>
@@ -35,7 +29,6 @@ const Content = () => {
               className="img-fluid"
               src={process.env.PUBLIC_URL + "assets/images/content.png"}
               alt=""
-              dsadas
             />
           </div>
         </div>

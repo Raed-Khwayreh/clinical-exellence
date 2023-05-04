@@ -134,7 +134,7 @@
   flex-grow: 0;
   margin-bottom: 25px;
 }
-input {
+.join input {
   width: 290px;
   padding: 15px 15px;
   background: #f9f9f9;
@@ -185,6 +185,6 @@ input {
   text-align: start;
 }
 .profileName a p {
-  margin: 0px   ;
+  margin: 0px;
   text-align: start;
 }

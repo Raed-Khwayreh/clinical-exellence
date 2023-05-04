@@ -1,40 +1,78 @@
 import "./HeaderStyle.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import { Link } from "react-router-dom";
 import {
   BsChevronCompactDown,
   BsPerson,
   BsSearch,
-  BsCart,
   BsHeart,
-  BsCart3,
   BsFilterRight,
 } from "react-icons/bs";
+import CartIcon from "../Cart icon/CartIcon";
 const Header = () => {
   const altNavList = ["Home", "Product", "Pricing", "Content"];
   const basicNavList = [
     {
       text: "Home",
       item: <></>,
+      class: "nav-item",
     },
     {
       text: "Shop",
-      item: <BsChevronCompactDown />,
+      item: (
+        <>
+          <div
+            className="nav-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <BsChevronCompactDown color="white" />
+          </div>
+          <ul className="dropdown-menu">
+            <li>
+              <a className="dropdown-item" href="#">
+                Action
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Another action
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Something else here
+              </a>
+            </li>
+          </ul>
+        </>
+      ),
+      className: "nav-item dropdown",
     },
     {
       text: "About",
       item: <></>,
+      className: "nav-item",
     },
     {
       text: "Blog",
       item: <></>,
+      item: <></>,
+      className: "nav-item",
     },
     {
       text: "Content",
       item: <></>,
+      item: <></>,
+      className: "nav-item",
     },
     {
       text: "Pages",
       item: <></>,
+      item: <></>,
+      className: "nav-item",
     },
   ];
   return (
@@ -45,19 +83,24 @@ const Header = () => {
         </p>
 
         <div className="altNavUl">
-          <BsSearch />
-          <BsCart3 />
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <BsFilterRight />
-          </button>
+          <div className="searchIcon">
+            <BsSearch />
+            <input type="" />
+          </div>
+          <CartIcon></CartIcon>
+          <div>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <BsFilterRight />
+            </button>
+          </div>
         </div>
         <div
           className="collapse navbar-collapse altNavList"
@@ -96,7 +139,7 @@ const Header = () => {
             >
               <ul className="navbar-nav mx-auto">
                 {basicNavList.map((e, i) => (
-                  <li className="nav-item" key={i}>
+                  <li className={e.class} key={i}>
                     <div className="special">
                       <a className="nav-link" aria-current="page" href="#">
                         {e.text}
@@ -113,29 +156,29 @@ const Header = () => {
             >
               <ul className="navbar-nav mx-auto list">
                 <li className="nav-item">
-                  <div>
-                    <BsPerson />
-                    <span className="Login" href="">
-                      Login/Register
-                    </span>
-                  </div>
+                  <Link to="/dashboard" className="toDash">
+                    <div>
+                      <BsPerson size={16} />
+                      <span className="Login" href="">
+                        Login/Register
+                      </span>
+                    </div>
+                  </Link>
                 </li>
-                <li className="nav-item dropdown">
-                  <div>
+                <li className="nav-item dropdown ">
+                  <div className="searchIcon">
                     <BsSearch />
+                    <input type="" />
                   </div>
                 </li>
                 <li className="nav-item dropdown">
                   <div>
-                    <BsCart />
-                    <span className="count" href="">
-                      1
-                    </span>
+                    <CartIcon />
                   </div>
                 </li>
                 <li className="nav-item dropdown">
                   <div>
-                    <BsHeart />
+                    <BsHeart size={16} />
                     <span className="count" href="">
                       1
                     </span>

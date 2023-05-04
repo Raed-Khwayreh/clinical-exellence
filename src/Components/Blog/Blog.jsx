@@ -23,8 +23,8 @@ the two major realms of Classical physics: Newtonian mechanics "
         </div>
         <div className="container ">
           <div className="blogFlex">
-            {blog.map((e) => (
-              <BlogCard img={e} />
+            {blog.map((e, i) => (
+              <BlogCard key={i} img={e} />
             ))}
           </div>
         </div>

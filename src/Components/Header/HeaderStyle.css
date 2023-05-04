@@ -144,6 +144,31 @@ svg {
   font-size: 12px;
   margin-left: 6px;
 }
+.searchIcon {
+  align-items: center;
+  margin-bottom: 2px;
+}
+.searchIcon input {
+  margin: 0px;
+  position: relative;
+  transition: width 2s ease-in-out;
+  right: 22px;
+  width: 20px;
+  border: none;
+  background-color: transparent;
+}
+.searchIcon input:hover {
+  width: 120px;
+  background-color: white;
+  border-radius: 10px;
+}
+.searchIcon input:focus {
+  border: none;
+  width: 120px;
+  background-color: white;
+  border-radius: 10px;
+}
+
 .list li {
   padding-left: 25px;
 }
@@ -156,7 +181,7 @@ svg {
   background-color: #0e8bd3;
 }
 .second {
-  border: solid white 1px;  
+  border: solid white 1px;
   background-color: transparent;
   color: white;
 }
@@ -171,4 +196,10 @@ svg {
 }
 .nav-link {
   display: inline !important;
+}
+.dropdown-menu li a {
+  color: black;
+}
+.toDash {
+  text-decoration: none;
 }

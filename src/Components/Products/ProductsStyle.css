@@ -4,8 +4,13 @@
 .productsFlex {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  margin-left: 8rem;
+  justify-content: start;
   flex-wrap: wrap;
+}
+
+.product img {
+  width: 198px;
 }
 .product {
   font-family: Montserrat;
@@ -76,9 +81,7 @@
     margin-left: 4rem;
   }
 }
-.carousel .thumb {
-  display: none !important;
-}
+
 @media screen and (max-width: 768px) {
   .products {
     padding: 0px 0px;
@@ -94,4 +97,14 @@
 .carousel .control-dots .dot {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
   background: #000 !important;
+}
+.addAndLove {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  position: relative;
+  bottom: 15px;
+}
+.advButton:hover {
+  background-color: #252b42;
 }

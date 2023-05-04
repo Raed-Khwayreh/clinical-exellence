@@ -28,7 +28,12 @@ const Features = () => {
       <div className="container">
         <div className="flex">
           {features.map((e, i) => (
-            <FeaturesElement num={e.num} title={e.title} disc={e.disc} />
+            <FeaturesElement
+              key={i}
+              num={e.num}
+              title={e.title}
+              disc={e.disc}
+            />
           ))}
         </div>
       </div>
