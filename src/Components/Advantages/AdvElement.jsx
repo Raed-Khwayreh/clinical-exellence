@@ -1,6 +1,6 @@
 import { BsCreditCard } from "react-icons/bs";
 import { FaChevronRight } from "react-icons/fa";
-const AdvElement = () => {
+const AdvElement = (props) => {
   return (
     <div className="advElement">
       <div className="advCard">
@@ -10,10 +10,14 @@ const AdvElement = () => {
         <h5>Work at the speed</h5>
         <div className="advCardLine"></div>
         <p>The gradual accumulation of information about </p>
-        <button className="advButton">
-          <p>Learn More</p>
-          <FaChevronRight color="#23a6f0" />
-        </button>
+        {props.num < 3 ? (
+          <button className="advButton">
+            <p>Learn More</p>
+            <FaChevronRight color="#23a6f0" />
+          </button>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

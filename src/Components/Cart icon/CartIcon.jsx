@@ -2,53 +2,22 @@ import "./CartIcon.css";
 import { BsCart } from "react-icons/bs";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { useState } from "react";
-const CartIcon = () => {
-  const cardList = [
-    {
-      img: "assets/images/p5.png",
-      productName: "Prenatal care",
-      price: 15,
-      quantity: 3,
-    },
-    {
-      img: "assets/images/p8.png",
-      productName: "Nutritional support",
-      price: 85,
-      quantity: 1,
-    },
-    {
-      img: "assets/images/p4.png",
-      productName: "Nutritional support",
-      price: 25,
-      quantity: 1,
-    },
-    {
-      img: "assets/images/p2.png",
-      productName: "Prenatal care",
-      price: 35,
-      quantity: 5,
-    },
-  ];
+const CartIcon = (props) => {
+  const cardList = props.cartList;
   const calcPrice = () => {
     let sum = 0;
     for (let index = 0; index < cardList.length; index++) {
-      sum += cardList[index].price;
+      sum += parseInt(cardList[index].Price);
     }
     return sum;
   };
-  const calcQuantity = () => {
-    let sum = 0;
-    for (let index = 0; index < cardList.length; index++) {
-      sum += cardList[index].quantity;
-    }
-    return sum;
-  };
+
   const [openCart, setOpen] = useState(false);
   return (
     <div className="cartToDrop" onClick={() => setOpen((prev) => !prev)}>
       <BsCart />
       <span className="count" href="">
-        {cardList.length}
+        {props.cartCount}
       </span>
       {openCart && (
         <div className="dropCart">
@@ -60,9 +29,6 @@ const CartIcon = () => {
             <div className="price d-flex">
               <p>
                 Total Price : <span>{"$" + calcPrice()}</span>
-              </p>{" "}
-              <p className="ms-1">
-                Total Quantity: <span>{calcQuantity()}</span>
               </p>
             </div>
           </div>
@@ -72,14 +38,11 @@ const CartIcon = () => {
               {cardList.map((e) => (
                 <li>
                   <div className="cardListItem">
-                    <img src={process.env.PUBLIC_URL + e.img} alt="" />
+                    <img src={process.env.PUBLIC_URL + e.Image} alt="" />
                     <p className="cardProductName">
-                      {e.productName} <br />
+                      {e.Name} <br />
                       <div className="priceAndQauntity ">
-                        <p className="cardPrice">{"$" + e.price}</p>
-                        <p className="cardQuantity">
-                          {"Quantity : " + e.quantity}
-                        </p>
+                        <p className="cardPrice">{"$" + e.Price}</p>
                       </div>
                     </p>
                   </div>

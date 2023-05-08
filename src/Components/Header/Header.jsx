@@ -9,8 +9,14 @@ import {
   BsFilterRight,
 } from "react-icons/bs";
 import CartIcon from "../Cart icon/CartIcon";
-const Header = () => {
-  const altNavList = ["Home", "Product", "Pricing", "Content"];
+import { useState } from "react";
+const Header = (props) => {
+  const altNavList = [
+    <a href="">Home</a>,
+    <a href="">Product</a>,
+    <a href="">Pricing</a>,
+    <Link to="/dashboard">Dashboard</Link>,
+  ];
   const basicNavList = [
     {
       text: "Home",
@@ -59,18 +65,15 @@ const Header = () => {
     {
       text: "Blog",
       item: <></>,
-      item: <></>,
       className: "nav-item",
     },
     {
       text: "Content",
       item: <></>,
-      item: <></>,
       className: "nav-item",
     },
     {
       text: "Pages",
-      item: <></>,
       item: <></>,
       className: "nav-item",
     },
@@ -87,7 +90,10 @@ const Header = () => {
             <BsSearch />
             <input type="" />
           </div>
-          <CartIcon></CartIcon>
+          <CartIcon
+            cartCount={props.cartCount}
+            cartList={props.cartList}
+          ></CartIcon>
           <div>
             <button
               className="navbar-toggler"
@@ -109,7 +115,7 @@ const Header = () => {
           <ul className="navbar-nav mx-auto">
             {altNavList.map((e, i) => (
               <li className="nav-item" key={i}>
-                <a href="">{e}</a>
+                {e}
               </li>
             ))}
           </ul>
@@ -173,14 +179,17 @@ const Header = () => {
                 </li>
                 <li className="nav-item dropdown">
                   <div>
-                    <CartIcon />
+                    <CartIcon
+                      cartCount={props.cartCount}
+                      cartList={props.cartList}
+                    ></CartIcon>
                   </div>
                 </li>
                 <li className="nav-item dropdown">
                   <div>
                     <BsHeart size={16} />
                     <span className="count" href="">
-                      1
+                      {props.count}
                     </span>
                   </div>
                 </li>

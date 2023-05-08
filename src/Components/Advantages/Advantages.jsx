@@ -3,6 +3,7 @@ import Title from "../common/Title";
 import AdvElement from "./AdvElement";
 const Advantages = () => {
   const array = [1, 2, 3, 4];
+
   return (
     <section className="advantages">
       <div className="container">
@@ -25,8 +26,8 @@ const Advantages = () => {
             </div>
             <div className="col-md-6">
               <div className="advFlex">
-                {array.map((i) => (
-                  <AdvElement key={i} />
+                {array.map((e, i) => (
+                  <AdvElement key={i} num={e} />
                 ))}
               </div>
             </div>

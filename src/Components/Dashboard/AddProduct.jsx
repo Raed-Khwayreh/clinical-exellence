@@ -22,6 +22,7 @@ const AddProduct = (props) => {
       [name]: `assets/images/${s[2]}`,
     }));
   };
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevFormData) => ({
@@ -29,6 +30,7 @@ const AddProduct = (props) => {
       [name]: value,
     }));
   };
+
   const validate = () => {
     if (formData.Name && formData.Category && formData.Price && formData.Image)
       return true;
@@ -37,6 +39,7 @@ const AddProduct = (props) => {
 
   const handleSubmit = async (event) => {
     console.log(props.defaultValue);
+    //submit add
     if (props.defaultValue === false) {
       event.preventDefault();
       if (!validate()) {
@@ -53,13 +56,14 @@ const AddProduct = (props) => {
           } else {
             throw new Error("Failed to add item");
           }
-          props.close();
+          // props.close();
           props.afterAdd();
         } catch (error) {
           console.log(error);
         }
       }
     } else {
+      //submit edit
       event.preventDefault();
       if (!validate()) {
         setError(true);
